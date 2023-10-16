@@ -1,5 +1,5 @@
 {% set name = "crispy-bootstrap4" %}
-{% set version = "2022.1" %}
+{% set version = "2023.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/crispy-bootstrap4-{{ version }}.tar.gz
-  sha256: f18386c4d96180c1bb1212487d6e8f5a3dd1a9bb58d3032183973d4d130b55f9
+  sha256: d60e93eb6d82886c009eb174f2a4c78fdac602a1efadf0305471c84815bd973a
 
 build:
   noarch: python
