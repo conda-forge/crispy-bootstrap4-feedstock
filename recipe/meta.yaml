@@ -1,18 +1,18 @@
 {% set name = "crispy-bootstrap4" %}
-{% set version = "2024.10" %}
+{% set version = "2025.6" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/crispy-bootstrap4-{{ version }}.tar.gz
-  sha256: 503e8922b0f3b5262a6fdf303a3a94eb2a07514812f1ca130b88f7c02dd25e2b
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 69066c33fc9c8841cbd8741a7ec99ad9234f12877b4549490031a47c2c1abd79
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -21,8 +21,10 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - django-crispy-forms >=1.14.0
-    - django >=3.2
+    - django-crispy-forms >=2.3
+    - django >=4.2
+    # - pytest-django 
+    # - pytest 
 
 test:
   imports:
