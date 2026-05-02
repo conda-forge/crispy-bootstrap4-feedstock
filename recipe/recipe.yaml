@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: crispy-bootstrap4
-  version: "2025.6"
+  version: "2026.2"
 
 package:
   name: ${{ name|lower }}
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 69066c33fc9c8841cbd8741a7ec99ad9234f12877b4549490031a47c2c1abd79
+  sha256: 66f8f14bf9c2c16ed94243236ed253a94e5a625afa1ee64022ce29db98c6cd85
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
